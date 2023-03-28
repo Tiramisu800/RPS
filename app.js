@@ -82,11 +82,11 @@ provider.send("eth_requestAccounts", []).then(()=>{
 
 
 //from html page
-let userScore = 0;
-let compScore = 0;
+//let userScore = 0;
+//let compScore = 0;
 
-const userScore_span = document.getElementById('user-score');
-const compScore_span = document.getElementById('comp-score');
+//const userScore_span = document.getElementById('user-score');
+//const compScore_span = document.getElementById('comp-score');
 const result_p = document.querySelector('.result > p');
 
 const rock_div = document.getElementById('r');
@@ -111,20 +111,20 @@ function updateScore() {
 
 
 function win(userChoice, compChoice){
-    userScore++;
+    //userScore++;
     result_p.innerHTML = convertToWord(userChoice) + ' beats ' + convertToWord(compChoice) + ". You win!";
-    updateScore();
+    //updateScore();
 }
 
 function lose(userChoice, compChoice){
-    compScore++;
+    //compScore++;
     result_p.innerHTML = convertToWord(userChoice) + ' loses to ' + convertToWord(compChoice) + ". You lost...";
-    updateScore();
+    //updateScore();
 }
 
 function draw(userChoice, compChoice){
     result_p.innerHTML = convertToWord(userChoice) + ' equals to ' + convertToWord(compChoice) + ". It's a draw!";
-    updateScore();
+    //updateScore();
 }
 
 
@@ -138,8 +138,8 @@ async function game(userChoice){
 
     // Unscribe, why not work((((
     await contract.off("GamePlayed");
-    userScore_span.removeEventListener('DOMSubtreeModified', updateScore);
-    compScore_span.removeEventListener('DOMSubtreeModified', updateScore);
+    // userScore_span.removeEventListener('DOMSubtreeModified', updateScore);
+    // compScore_span.removeEventListener('DOMSubtreeModified', updateScore);
 
     // Subscribe
     const eventName = "GamePlayed";
