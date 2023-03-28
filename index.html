@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> RPS - 1, 2 3... LET'S GO !!! </title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
+        type="application/javascript"></script>
+        
+</head>
+<body>
+    <header>
+        <h1>Rock Paper Scissors</h1>
+    </header>
+
+    <div class="score-board">
+        <div id="user-label" class="badge">user</div>
+        <div id="comp-label" class="badge">computer</div>
+        <span id="user-score">0</span>:<span id="comp-score">0</span>
+    </div>
+    
+    <div class="result">
+        <p>Paper covers Rock.</p>
+    </div>
+    <br>
+    <div class="betclass">
+        <div class="betpart">Your bet: (in TBNB)</div>
+        <div class="betpart"><input type="text" id="bet" /></div>
+    </div>
+
+    <div class="choices">
+        <div class="choice" id="r">
+            <img src="images/rock.png" alt="" style="width: 350px;">
+        </div>
+        <div class="choice" id="p">
+            <img src="images/paper.png" alt="" style="width: 350px;">
+        </div>
+        <div class="choice" id="s">
+            <img src="images/scissors.png" alt="" style="width: 350px;">
+        </div>
+    </div>
+
+    <p id="action-msg">Make your choice.</p>
+    
+    <div class="gamehistory">
+        <button onclick="viewHistory()">Game History</button>
+        <p><span id="history"></span></p>
+    </div>
+    
+
+    <script src="app.js" charset="UTF-8"></script>
+
+</body>
+</html>
